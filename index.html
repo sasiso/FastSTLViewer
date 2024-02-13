@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Viewer</title>
+	<script type="module" src="stlviewer.js"></script>
+</head>
+<body>
+    <!-- File Upload Form -->
+    <form id="upload-form">
+        <input type="file" id="stl-file" accept=".stl">
+    </form>
+
+    <!-- 3D Model Display -->
+    <div id="stl-container"></div>
+
+    <!-- Weight Display -->
+    <div id="weight-display"></div>
+
+    <script type="module">
+        import { setup } from './stlviewer.js';
+
+        // Call the setup function when the document is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            setup();
+        });
+    </script>
+   
+</body>
+</html>
